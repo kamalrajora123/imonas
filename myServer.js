@@ -312,6 +312,11 @@ mongoose.connect("mongodb+srv://kamalrajora123:vNVCDjZklAgOKu4o@cluster0.yxm58.m
     .then(() => console.log("Connected to MongoDB"))
     .catch((error) => console.error("MongoDB connection error:", error));
 // Use routes in the app
+
+
+app.get("/",(req,res)=>{
+    res.status(200).send("hello from the server")
+})
 const userRoutes = require('./routes/userRoute.js');
 app.use('/api', userRoutes);
 
